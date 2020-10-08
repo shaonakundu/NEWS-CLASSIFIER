@@ -6,12 +6,11 @@ import newspaper
 from newspaper import Article
 import urllib
 
-app = Flask(__name__, template_folder='venv/templates', static_folder="venv/static")
+app = Flask(__name__, template_folder='flask_config/templates', static_folder="flask_config/static")
 CORS(app)
 
-with open('model.pickle', 'rb') as target:
+with open('saved_model/model1.pickle', 'rb') as target:     #model.pickle is unprocessed
     model = pickle.load(target)
-
 
 @app.route('/')
 def home():
