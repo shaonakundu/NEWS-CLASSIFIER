@@ -2,7 +2,6 @@ from flask import Flask, render_template, request, url_for, redirect
 import pickle
 import numpy as np
 from flask_cors import CORS
-import newspaper
 from newspaper import Article
 import urllib
 
